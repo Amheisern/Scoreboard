@@ -1,5 +1,5 @@
 import './style.css'
-
+console.clear()
 // let teamOneScore = 0
 
 // // let TeamTwoScore = 0
@@ -14,8 +14,8 @@ import './style.css'
 //   addingScoreOne?.addEventListener('click', addOneScore)
 // }
 // gavin review
-const teamOnePlusButton = document.querySelector('i.add')
-const teamOneMinusButton = document.querySelector('i.subtract')
+const teamOnePlusButton = document.querySelector('.team1 i.add')
+const teamOneMinusButton = document.querySelector('.team1 i.subtract')
 const teamOneScoreNumber = document.querySelector('section.team1 h3')
 const fieldTeamOne = document.querySelector('section.team1 input')
 
@@ -58,6 +58,7 @@ function handleClickOnTeamOneMinusButton() {
 }
 
 teamOneMinusButton?.addEventListener('click', handleClickOnTeamOneMinusButton)
+
 // -------------------------------- teams one---------------------------
 const teamTwoPlusButton = document.querySelector('section.team2 i.add')
 const teamTwoMinusButton = document.querySelector('section.team2 i.subtract')
