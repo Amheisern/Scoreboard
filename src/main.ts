@@ -16,7 +16,14 @@ import './style.css'
 // gavin review
 const teamOnePlusButton = document.querySelector('i.add')
 const teamOneMinusButton = document.querySelector('i.subtract')
-const teamOneScore = document.querySelector('h3')
+const teamOneScore = document.querySelector('section.team1 h3')
+
+const teamTwoPlusButton = document.querySelector('section.team2 i.add')
+const teamTwoMinusButton = document.querySelector('section.team2 i.add')
+const teamTwoScore = document.querySelector('section.team2 h3')
+console.log(teamTwoMinusButton)
+console.log(teamTwoPlusButton)
+console.log(teamTwoScore)
 console.log(teamOneScore)
 console.log(teamOnePlusButton)
 console.log(teamOneMinusButton)
