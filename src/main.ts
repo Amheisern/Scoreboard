@@ -63,7 +63,41 @@ const teamTwoPlusButton = document.querySelector('section.team2 i.add')
 const teamTwoMinusButton = document.querySelector('section.team2 i.subtract')
 const teamTwoScoreNumber = document.querySelector('section.team2 h3')
 const fieldTeamTwo = document.querySelector('section.team2 input')
+
 let teamTwoScore = 0
+
+function handleClickOnTeamTwoPlusButton() {
+  // can use teamOneScore + 1 or  teamOneScore++
+  teamTwoScore = teamTwoScore + 1
+
+  if (teamTwoScoreNumber instanceof HTMLElement) {
+    teamTwoScoreNumber.textContent = `${teamTwoScore}`
+  }
+  console.log(teamTwoScore)
+  // testing step
+  // console.log('Plus click')
+}
+
+teamTwoPlusButton?.addEventListener('click', handleClickOnTeamTwoPlusButton)
+
+// mimic the plus button function above
+function handleClickOnTeamTwoMinusButton() {
+  // can use teamOneScore - 1 or  teamOneScore--
+  // adding a guard clause to prevent score from going zero
+  if (teamTwoScore === 0) {
+    console.debug('You shall not pass!')
+    return
+  }
+
+  teamTwoScore = teamTwoScore - 1
+
+  if (teamTwoScoreNumber instanceof HTMLElement) {
+    teamTwoScoreNumber.textContent = `${teamTwoScore}`
+  }
+  console.log(teamTwoScore)
+  // console.log('click Minus')
+}
+teamTwoMinusButton?.addEventListener('click', handleClickOnTeamTwoMinusButton)
 
 console.log(fieldTeamTwo)
 console.log(fieldTeamOne)
