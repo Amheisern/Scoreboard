@@ -17,6 +17,8 @@ import './style.css'
 const teamOnePlusButton = document.querySelector('i.add')
 const teamOneMinusButton = document.querySelector('i.subtract')
 const teamOneScoreNumber = document.querySelector('section.team1 h3')
+const fieldTeamOne = document.querySelector('section.team1 input')
+
 let teamOneScore = 0
 
 //
@@ -40,6 +42,12 @@ teamOnePlusButton?.addEventListener('click', handleClickOnTeamOnePlusButton)
 // mimic the plus button function above
 function handleClickOnTeamOneMinusButton() {
   // can use teamOneScore - 1 or  teamOneScore--
+  // adding a guard clause to prevent score from going zero
+  if (teamOneScore === 0) {
+    console.debug('You shall not pass!')
+    return
+  }
+
   teamOneScore = teamOneScore - 1
 
   if (teamOneScoreNumber instanceof HTMLElement) {
@@ -50,11 +58,15 @@ function handleClickOnTeamOneMinusButton() {
 }
 
 teamOneMinusButton?.addEventListener('click', handleClickOnTeamOneMinusButton)
-
+// -------------------------------- teams one---------------------------
 const teamTwoPlusButton = document.querySelector('section.team2 i.add')
 const teamTwoMinusButton = document.querySelector('section.team2 i.subtract')
 const teamTwoScoreNumber = document.querySelector('section.team2 h3')
+const fieldTeamTwo = document.querySelector('section.team2 input')
 let teamTwoScore = 0
+
+console.log(fieldTeamTwo)
+console.log(fieldTeamOne)
 console.log(teamTwoMinusButton)
 console.log(teamTwoPlusButton)
 console.log(teamTwoScoreNumber)
