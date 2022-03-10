@@ -16,20 +16,29 @@ import './style.css'
 // gavin review
 const teamOnePlusButton = document.querySelector('i.add')
 const teamOneMinusButton = document.querySelector('i.subtract')
-const teamOneScore = document.querySelector('section.team1 h3')
+const teamOneScoreNumber = document.querySelector('section.team1 h3')
+let teamOneScore = 0
+
 //
 // Must have a function to deal with an event listener
 //console click to check code
 //
 function handleClickOnTeamOnePlusButton() {
-  console.log('click Plus')
+  // can use teamOneScore + 1 or  teamOneScore++
+  teamOneScore = teamOneScore + 1
+  console.log(teamOneScore)
+  // testing step
+  // console.log('Plus click')
 }
 
 teamOnePlusButton?.addEventListener('click', handleClickOnTeamOnePlusButton)
 
 // mimic the plus button function above
 function handleClickOnTeamOneMinusButton() {
-  console.log('click Minus')
+  // can use teamOneScore - 1 or  teamOneScore--
+  teamOneScore = teamOneScore - 1
+  console.log(teamOneScore)
+  // console.log('click Minus')
 }
 
 teamOneMinusButton?.addEventListener('click', handleClickOnTeamOneMinusButton)
@@ -40,6 +49,6 @@ const teamTwoScore = document.querySelector('section.team2 h3')
 console.log(teamTwoMinusButton)
 console.log(teamTwoPlusButton)
 console.log(teamTwoScore)
-console.log(teamOneScore)
+console.log(teamOneScoreNumber)
 console.log(teamOnePlusButton)
 console.log(teamOneMinusButton)
