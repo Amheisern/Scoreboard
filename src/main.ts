@@ -60,6 +60,7 @@ function handleClickOnTeamOneMinusButton() {
 teamOneMinusButton?.addEventListener('click', handleClickOnTeamOneMinusButton)
 
 // -------------------------------- teams one---------------------------
+//  variable targets for query selectors... first step with conlog for testing
 const teamTwoPlusButton = document.querySelector('section.team2 i.add')
 const teamTwoMinusButton = document.querySelector('section.team2 i.subtract')
 const teamTwoScoreNumber = document.querySelector('section.team2 h3')
