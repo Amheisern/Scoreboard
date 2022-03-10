@@ -13,3 +13,10 @@ import './style.css'
 //   }
 //   addingScoreOne?.addEventListener('click', addOneScore)
 // }
+// gavin review
+const teamOnePlusButton = document.querySelector('i.add')
+const teamOneMinusButton = document.querySelector('i.subtract')
+const teamOneScore = document.querySelector('h3')
+console.log(teamOneScore)
+console.log(teamOnePlusButton)
+console.log(teamOneMinusButton)
