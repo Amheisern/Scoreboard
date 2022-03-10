@@ -26,6 +26,10 @@ let teamOneScore = 0
 function handleClickOnTeamOnePlusButton() {
   // can use teamOneScore + 1 or  teamOneScore++
   teamOneScore = teamOneScore + 1
+
+  if (teamOneScoreNumber instanceof HTMLElement) {
+    teamOneScoreNumber.textContent = `${teamOneScore}`
+  }
   console.log(teamOneScore)
   // testing step
   // console.log('Plus click')
@@ -37,6 +41,10 @@ teamOnePlusButton?.addEventListener('click', handleClickOnTeamOnePlusButton)
 function handleClickOnTeamOneMinusButton() {
   // can use teamOneScore - 1 or  teamOneScore--
   teamOneScore = teamOneScore - 1
+
+  if (teamOneScoreNumber instanceof HTMLElement) {
+    teamOneScoreNumber.textContent = `${teamOneScore}`
+  }
   console.log(teamOneScore)
   // console.log('click Minus')
 }
@@ -45,10 +53,11 @@ teamOneMinusButton?.addEventListener('click', handleClickOnTeamOneMinusButton)
 
 const teamTwoPlusButton = document.querySelector('section.team2 i.add')
 const teamTwoMinusButton = document.querySelector('section.team2 i.subtract')
-const teamTwoScore = document.querySelector('section.team2 h3')
+const teamTwoScoreNumber = document.querySelector('section.team2 h3')
+let teamTwoScore = 0
 console.log(teamTwoMinusButton)
 console.log(teamTwoPlusButton)
-console.log(teamTwoScore)
+console.log(teamTwoScoreNumber)
 console.log(teamOneScoreNumber)
 console.log(teamOnePlusButton)
 console.log(teamOneMinusButton)
