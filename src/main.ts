@@ -16,7 +16,7 @@ console.clear()
 // gavin review
 const teamOnePlusButton = document.querySelector('.team1 i.add')
 const teamOneMinusButton = document.querySelector('.team1 i.subtract')
-const teamOneScoreNumber = document.querySelector('.team1 h3')
+const teamOneScoreNumber = document.querySelector('.team1 h3')!
 const fieldTeamOne = document.querySelector('.team1 input')
 const teamOneText = document.querySelector('.team1 h2')!
 const freshInputs = document.querySelectorAll('input')!
@@ -79,11 +79,17 @@ function handleClickOnTeamOneMinusButton() {
 
 teamOneMinusButton?.addEventListener('click', handleClickOnTeamOneMinusButton)
 
+function handleResetScore() {
+  teamOneScoreNumber.textContent = '0'
+  console.log('reset')
+}
+teamOneScoreNumber?.addEventListener('dblclick', handleResetScore)
+
 // -------------------------------- teams one---------------------------
 //  variable targets for query selectors... first step with console log for testing
 const teamTwoPlusButton = document.querySelector('section.team2 i.add')
 const teamTwoMinusButton = document.querySelector('section.team2 i.subtract')
-const teamTwoScoreNumber = document.querySelector('section.team2 h3')
+const teamTwoScoreNumber = document.querySelector('section.team2 h3')!
 const fieldTeamTwo = document.querySelector('section.team2 input')
 const teamTwoText = document.querySelector('.team2 h2')!
 // const freshInputTeamTwo = document.querySelector('section.team2 input')!
@@ -138,6 +144,12 @@ function handleClickOnTeamTwoMinusButton() {
   // console.log('click Minus')
 }
 teamTwoMinusButton?.addEventListener('click', handleClickOnTeamTwoMinusButton)
+
+function handleResetScoreTeamTwo() {
+  teamTwoScoreNumber.textContent = '0'
+  console.log('reset')
+}
+teamTwoScoreNumber?.addEventListener('dblclick', handleResetScoreTeamTwo)
 
 console.log(winMessage)
 console.log(teamOneText)
