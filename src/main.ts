@@ -38,9 +38,12 @@ let teamOneScore = 0
 //
 function handleClickOnTeamOnePlusButton() {
   // can use teamOneScore + 1 or  teamOneScore++
+  if (teamOneScore === 21) {
+    console.debug('You shall not pass!')
+    return
+  }
   teamOneScore = teamOneScore + 1
-
-  console.log(event)
+  // console.log(event)
   if (teamOneScoreNumber instanceof HTMLElement) {
     teamOneScoreNumber.textContent = `${teamOneScore}`
   }
