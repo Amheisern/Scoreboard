@@ -16,8 +16,9 @@ console.clear()
 // gavin review
 const teamOnePlusButton = document.querySelector('.team1 i.add')
 const teamOneMinusButton = document.querySelector('.team1 i.subtract')
-const teamOneScoreNumber = document.querySelector('section.team1 h3')
-const fieldTeamOne = document.querySelector('section.team1 input')
+const teamOneScoreNumber = document.querySelector('.team1 h3')
+const fieldTeamOne = document.querySelector('.team1 input')
+const teamOneText = document.querySelector('.team1 h2')
 
 let teamOneScore = 0
 
@@ -29,6 +30,7 @@ function handleClickOnTeamOnePlusButton() {
   // can use teamOneScore + 1 or  teamOneScore++
   teamOneScore = teamOneScore + 1
 
+  console.log(event)
   if (teamOneScoreNumber instanceof HTMLElement) {
     teamOneScoreNumber.textContent = `${teamOneScore}`
   }
@@ -60,11 +62,17 @@ function handleClickOnTeamOneMinusButton() {
 teamOneMinusButton?.addEventListener('click', handleClickOnTeamOneMinusButton)
 
 // -------------------------------- teams one---------------------------
-//  variable targets for query selectors... first step with conlog for testing
+//  variable targets for query selectors... first step with console log for testing
 const teamTwoPlusButton = document.querySelector('section.team2 i.add')
 const teamTwoMinusButton = document.querySelector('section.team2 i.subtract')
 const teamTwoScoreNumber = document.querySelector('section.team2 h3')
 const fieldTeamTwo = document.querySelector('section.team2 input')
+const teamTwoText = document.querySelector('.team2 h2')
+
+function updateTeamTwoName() {
+  // console.log('Write')
+}
+fieldTeamTwo?.addEventListener('input', updateTeamTwoName)
 
 let teamTwoScore = 0
 
@@ -101,6 +109,8 @@ function handleClickOnTeamTwoMinusButton() {
 }
 teamTwoMinusButton?.addEventListener('click', handleClickOnTeamTwoMinusButton)
 
+console.log(teamOneText)
+console.log(teamTwoText)
 console.log(fieldTeamTwo)
 console.log(fieldTeamOne)
 console.log(teamTwoMinusButton)
