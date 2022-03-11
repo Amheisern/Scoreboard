@@ -67,9 +67,15 @@ const teamTwoPlusButton = document.querySelector('section.team2 i.add')
 const teamTwoMinusButton = document.querySelector('section.team2 i.subtract')
 const teamTwoScoreNumber = document.querySelector('section.team2 h3')
 const fieldTeamTwo = document.querySelector('section.team2 input')
-const teamTwoText = document.querySelector('.team2 h2')
+const teamTwoText = document.querySelector('.team2 h2')!
 
-function updateTeamTwoName() {
+function updateTeamTwoName(event: Event) {
+  const elementChanges = event.target
+
+  if (elementChanges instanceof HTMLInputElement) {
+    const currentInputValue = elementChanges.value
+    teamTwoText.innerHTML = currentInputValue
+  }
   // console.log('Write')
 }
 fieldTeamTwo?.addEventListener('input', updateTeamTwoName)
