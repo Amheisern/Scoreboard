@@ -20,6 +20,7 @@ const teamOneScoreNumber = document.querySelector('.team1 h3')
 const fieldTeamOne = document.querySelector('.team1 input')
 const teamOneText = document.querySelector('.team1 h2')!
 const freshInputs = document.querySelectorAll('input')!
+const winMessage = document.querySelector('h1')!
 
 freshInputs.forEach((input) => (input.value = ''))
 
@@ -43,6 +44,7 @@ function handleClickOnTeamOnePlusButton() {
   // can use teamOneScore + 1 or  teamOneScore++
   if (teamOneScore === 21) {
     console.debug('You shall not pass!')
+    winMessage.textContent = `Team Blue Won!`
     return
   }
   teamOneScore = teamOneScore + 1
@@ -102,6 +104,7 @@ let teamTwoScore = 0
 function handleClickOnTeamTwoPlusButton() {
   if (teamTwoScore === 21) {
     console.debug('You shall not pass!')
+    winMessage.textContent = `Team Red Won!`
     return
   }
   // can use teamOneScore + 1 or  teamOneScore++
@@ -136,6 +139,7 @@ function handleClickOnTeamTwoMinusButton() {
 }
 teamTwoMinusButton?.addEventListener('click', handleClickOnTeamTwoMinusButton)
 
+console.log(winMessage)
 console.log(teamOneText)
 console.log(teamTwoText)
 console.log(fieldTeamTwo)
