@@ -19,6 +19,9 @@ const teamOneMinusButton = document.querySelector('.team1 i.subtract')
 const teamOneScoreNumber = document.querySelector('.team1 h3')
 const fieldTeamOne = document.querySelector('.team1 input')
 const teamOneText = document.querySelector('.team1 h2')!
+const freshInputs = document.querySelectorAll('input')!
+
+freshInputs.forEach((input) => (input.value = ''))
 
 function updateTeamOneName(event: Event) {
   const elementChanges = event.target
@@ -81,7 +84,8 @@ const teamTwoMinusButton = document.querySelector('section.team2 i.subtract')
 const teamTwoScoreNumber = document.querySelector('section.team2 h3')
 const fieldTeamTwo = document.querySelector('section.team2 input')
 const teamTwoText = document.querySelector('.team2 h2')!
-
+// const freshInputTeamTwo = document.querySelector('section.team2 input')!
+// freshInputTeamTwo.value = ''
 function updateTeamTwoName(event: Event) {
   const elementChanges = event.target
 
