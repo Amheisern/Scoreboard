@@ -96,6 +96,10 @@ fieldTeamTwo?.addEventListener('input', updateTeamTwoName)
 let teamTwoScore = 0
 
 function handleClickOnTeamTwoPlusButton() {
+  if (teamTwoScore === 21) {
+    console.debug('You shall not pass!')
+    return
+  }
   // can use teamOneScore + 1 or  teamOneScore++
   teamTwoScore = teamTwoScore + 1
 
