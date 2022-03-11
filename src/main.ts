@@ -18,8 +18,18 @@ const teamOnePlusButton = document.querySelector('.team1 i.add')
 const teamOneMinusButton = document.querySelector('.team1 i.subtract')
 const teamOneScoreNumber = document.querySelector('.team1 h3')
 const fieldTeamOne = document.querySelector('.team1 input')
-const teamOneText = document.querySelector('.team1 h2')
+const teamOneText = document.querySelector('.team1 h2')!
 
+function updateTeamOneName(event: Event) {
+  const elementChanges = event.target
+
+  if (elementChanges instanceof HTMLInputElement) {
+    const currentInputValue = elementChanges.value
+    teamOneText.innerHTML = currentInputValue
+  }
+  // console.log('Write')
+}
+fieldTeamOne?.addEventListener('input', updateTeamOneName)
 let teamOneScore = 0
 
 //
