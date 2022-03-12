@@ -80,7 +80,7 @@ function handleClickOnTeamOneMinusButton() {
 teamOneMinusButton?.addEventListener('click', handleClickOnTeamOneMinusButton)
 
 function handleResetScore() {
-  teamOneScoreNumber.textContent = '0'
+  teamOneScoreNumber.textContent = `${(teamOneScore = 0)}`
   console.log('reset')
 }
 teamOneScoreNumber?.addEventListener('dblclick', handleResetScore)
@@ -146,7 +146,8 @@ function handleClickOnTeamTwoMinusButton() {
 teamTwoMinusButton?.addEventListener('click', handleClickOnTeamTwoMinusButton)
 
 function handleResetScoreTeamTwo() {
-  teamTwoScoreNumber.textContent = '0'
+  // This isn't resetting the score but setting to zero... need revision
+  teamTwoScoreNumber.textContent = `${(teamTwoScore = 0)}`
   console.log('reset')
 }
 teamTwoScoreNumber?.addEventListener('dblclick', handleResetScoreTeamTwo)
